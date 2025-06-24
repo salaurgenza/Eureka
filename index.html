@@ -462,6 +462,7 @@
                     <option value="Ham">Ham</option>
                     <option value="LenteTorica">LenteTorica</option>
                     <option value="PK">Trapianto Pk</option>
+                    <option value="TrapiantoPkVitrectomia">TrapiantoPkVitrectomia</option>
                     <option value="DMEK">Trapianto DMEK</option>
                     <option value="DSAEK">Trapianto DSAEK</option>
                     <option value="DALK">Trapianto DALK</option>
@@ -590,6 +591,8 @@
                 glaucoma: ["Cesto Glaucoma", "Cesto Cataratta", "Diatemia", "Mitomicina", "Nylon 10.0", "Urbason", "Dispositivo", "Vicryl 8.0"],
                 Cerchiaggio: ["Cesto Vitrectomia", "Sonda Crio", "Crio", "Custompack distacco", "Biom", "Indentatore", "Diatermia", "Candeliere", "Bianco", "Blue", "Olio Silicone", "Endodiatermia", "Perfluoro"],
                 PK: ["Custompack Trapianto", "Cesto Cheratoplastica", "Cesto Cataratta", "Lama 30° o 15°", "Trapano", "Punch", "Siringa 5 ml aria", "cornea", "Duovisc", "Etilon 10.0", "Vicryl 8.0", "Acetilcolina"],
+                TrapiantoPkVitrectomia: ["Custompack Trapianto", "Custompack 25","Cesto Cheratoplastica", "Cesto Biom", "vitrectomia Rizzo", "Lente di ekart", "Lama 15°", "Trapano", "Punch", "Antibiotici", "Cornea", "Duovisc", "Etilon 10.0", "Vicryl 8.0", "Prolene 10.0 ago curvo"],
+                
                 Express: ["custompack glaucoma", "Cesto Cataratta", "Crescent", "Lama 30°", "Express", "Diatermia", "Mitomicina", "Ial", "Ethilon 10.0"],
                 Pupilloplastica: ["Cesto Trapianto", "Lama 1.2 ", "Lama 2.2 ", "prolene 10.0 retto", "Pinza di Eckart", "Ial", "Aprokam"],
                 Ham: ["Cesto Vitrectomia", "Biom", "Membrana", "Punch", "2 Pinze di Eckart"],
@@ -1429,6 +1432,7 @@
                 Cerchiaggio: "Cerchiaggio",
                 Xen: "Xen",
                 PK: "PK",
+                TrapiantoPkVitrectomia: "TrapiantoPkVitrectomia",
                 Endoftalmite: "Endoftalmite",
                 Enucleazione: "Enucleazione",
                 vitrectomiaAnteriore: "vitrectomiaAnteriore",
@@ -2269,6 +2273,8 @@
                 CatarattaEcce: ["Blefarostato", "Pinza Hoskin", "Lama1.2", "Lama 2.2", "Provisc", "Pinza da Ressi", "Idrodissezione", "Chopper", "Manipolatore", "Facoemulsificatore", "Monovia", "Duovisc", "Lente", "Idrosutura", "Aprokam"],
                 Cerchiaggio: ["Custompack distacco", "Cesto Biom", "Episclerale", "Criodiatermia", "Sonda Diatermia", "Endodiatermia", "Laccio in Silicone", "Binario 287", "Sleeve", "Indentatore", "Blefarostato", "Pinza Hoskin", "Trocart", "Weskot", "Forbici Steevens", "Uncini", "Seta 2.0 a Metà", "Laccio", "Sleeve", "Waskets", "Pinze Congiuntivali", "Mersilene 5.0", "Lame 30° e 15", "Pannarale", "Aria 5cc", "Compasso", "Vicryl 7.0", "Bentelan e Gentamicina s.c"],
                 PK: ["Blefarostato", "Compasso", "Dermografica", "Hoskin", "Lama 30°", "Trapano", "forbici destra e sinistra", "Anello fleringa", "Vicryl 8.0", "Punch", "Siringa 5 ml aria",  "Serrafili", "spatola a cucchiaio", "cornea", "Duovisc", "Ethilon 10.0", "serrafili", "spatola a manina", "portaghi", "Acetilcolina"],
+                TrapiantoPkVitrectomia:["Blefarostato", "Compasso", "Dermografica", "Hoskin", "Trocar per infusione", "Anello di Fleringa", "vicryl 8.0", "Punch", "forbici destra e sinistra", "Visco", "Pulizia interna con raccolta campioni", "Pupilloplastica con prolene 10.0", "Trapano",  "Serrafili", "cornea", "Duovisc", "Ethilon 10.0", "serrafili", "spatola a manina", "portaghi", "Gentamicina"],
+                
                 Endoftalmite: ["Cesto Biom", "Vitrectomia", "Triamcinolone", "Prelievo in camera Anteriore", "Prelievo in camera Posteriore"],
                 Preserflo: ["Blefarostato", "Pinza corneale", "Weskot", "Crescent", "Compasso Marcato", "Stiletto per Evacuativa", "Ago 24G", "Preserflo", "Mitomicina", "Nylon 10.0", "Vicryl 8.0"],
                 Enucleazione: [notFound],
@@ -2806,7 +2812,7 @@
                 BiopsiaCongiuntivale: ["bleforastato", "carbocaina", "gel 4000", "weskot", "bietti", "crescent°", "diatermia", "portaghi con blocco", "vicryl 5.0"],
                 AnelliTantanio: ["bleforastato", "Bietti", "Arruga", "PortAghi", "Bulldog", "Seta 2.0", "Vicryl 8.0"],
                 Ham: ["blefarostato", "pinza Bietti", "alcool", "crescent", "vicryl 7.0", "membrana", "vicryl 7.0"],
-                Dacrio: ["ossivori", "Scolla Periostio", "bulldog"],
+                Dacrio: ["Specillo", "Bss con ago retto", "scolla periostio angolati", "ossivori p-m-g", "Scolla Periostio", "bulldog", "Klemmer", "DCI dipositivo","gentamcina con ago curvo", "seta 4.0 x 2"],
                 Pterigio: ["Gel4000", "Weskot", "Carbocaina", "Colibri", "Crescent", "Diatermia ", "Vicryl 8.0"],
                 Brachiterapia: ["Bietti", "Uncino lungo", "Ago di wright", "filo radiopaco", "Vicryl 5.0 V303"],
                 vitrectomia: [notFound],
