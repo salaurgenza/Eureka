@@ -535,7 +535,7 @@
                     <option value="Ham">Ham</option>
                     <option value="LenteTorica">LenteTorica</option>
                     <option value="PK">Trapianto Pk</option>
-                    <option value="Trapianto Pk + Vitrectomia">Trapianto Pk + Vitrectomia</option>
+                    <option value="TrapiantoPk+Vitrectomia">TrapiantoPk+Vitrectomia</option>
                     <option value="DMEK">Trapianto DMEK</option>
                     <option value="DSAEK">Trapianto DSAEK</option>
                     <option value="DALK">Trapianto DALK</option>
