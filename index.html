@@ -3123,7 +3123,7 @@
         selectedMaterial.forEach(item => {
             const row = materialiBody.insertRow();
             const cell = row.insertCell();
-            cell.innerHTML = '<a target="_blank" href="Resources/Images/' + item + '.JPG"><img src="Resources/Images/' + item + '.JPG" onerror="this.src=\'Resources/Images/' + item + '.jpg\'" class="zoomable" alt="' + item + '" width="150"></a>';
+            cell.innerHTML = '<a target = "_blanck" href="Resources/Images/' + item + '.JPG" class="zoomable"</a>' + item;
         });
 
         //SVUOTO E RIEMPIO LA TABELLA DELLA SEQUENZA
@@ -3133,8 +3133,8 @@
         selectedStrumento.forEach(item => {
             const row = sequenzaBody.insertRow();
             const cell = row.insertCell();
-            cell.innerHTML = '<a target="_blank" href="Resources/Images/' + item + '.JPG"><img src="Resources/Images/' + item + '.JPG" onerror="this.src=\'Resources/Images/' + item + '.jpg\'" class="zoomable" alt="' + item + '" width="150"></a>';
-        });
+            cell.innerHTML = '<a target = "_blanck" href="Resources/Images/' + item + '.JPG" class="zoomable"</a>' + item;
+         });
 
         //SVUOTO E RIEMPIO IL DIV CHE CONTIENE Il VIDEO
         const videoDiv = document.getElementById('video');
