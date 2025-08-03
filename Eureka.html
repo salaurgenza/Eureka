@@ -3137,38 +3137,17 @@
             cell.innerHTML = '<a target="_blank" href="' + item + '.JPG">' + item + '</a>';
          });
 
-  // SVUOTO E RIEMPIO IL DIV CHE CONTIENE IL VIDEO
-const videoDiv = document.getElementById('video');
-videoDiv.innerHTML = '';
+  //SVUOTO E RIEMPIO IL DIV CHE CONTIENE Il VIDEO
+        const videoDiv = document.getElementById('video');
+        videoDiv.innerHTML = '';
+        const selectedVideo = listaVideoInterventoMedico[medico][intervento];
+        const videoElement = document.createElement('video');
+        videoElement.autoplay = true;
+        videoElement.controls = true;
+        videoElement.src = "https://salaurgenza.github.io/Eureka/Cataratta.mp4";
+        videoDiv.appendChild(videoElement);
 
-// Recupera il nome del video dalla struttura dati
-const selectedVideo = listaVideoInterventoMedico[medico][intervento];
-console.log("VALORE GREZZO selectedVideo:", selectedVideo);
-
-// Pulisce il nome (senza spazi e senza .mp4), converte in minuscolo
-const selectedVideoName = selectedVideo.trim().replace(/\.mp4$/i, "").toLowerCase();
-console.log("VALORE PULITO selectedVideoName:", selectedVideoName);
-
-// Costruisce il link completo verso GitHub Pages
-const videoUrl = "https://salaurgenza.github.io/Eureka/" + selectedVideoName + ".mp4";
-console.log("URL COMPLETO:", videoUrl);
-
-// Crea il video element
-const videoElement = document.createElement('video');
-videoElement.autoplay = true;
-videoElement.controls = true;
-videoElement.width = 640;
-videoElement.src = videoUrl;
-
-// Gestione errore se il video non viene trovato
-videoElement.onerror = () => {
-    console.error("ERRORE CARICAMENTO VIDEO:", videoUrl);
-    videoDiv.innerHTML = `<p style="color:red;">Video non trovato:<br>${videoUrl}</p>`;
-};
-
-// Aggiunge il video al DOM
-videoDiv.appendChild(videoElement);
-
+    }
     // search
     function searchPage() {
         var searchInput = $('#searchInput').val().toLowerCase();
@@ -3184,6 +3163,7 @@ videoDiv.appendChild(videoElement);
 <script src="https://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
 </body>
 </html>
+
 
 
 
