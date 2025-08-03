@@ -1,4 +1,5 @@
-﻿<html lang="it">
+<!DOCTYPE html>
+<html lang="it">
 <head>
 
     <script src="../assets/js/color-modes.js"></script>
@@ -3137,7 +3138,7 @@
             cell.innerHTML = '<a target="_blank" href="' + item + '.JPG">' + item + '</a>';
          });
 
-  //SVUOTO E RIEMPIO IL DIV CHE CONTIENE Il VIDEO
+        //SVUOTO E RIEMPIO IL DIV CHE CONTIENE Il VIDEO
         const videoDiv = document.getElementById('video');
         videoDiv.innerHTML = '';
         const selectedVideo = listaVideoInterventoMedico[medico][intervento];
@@ -3147,7 +3148,7 @@
         videoElement.src = "https://salaurgenza.github.io/Eureka/Cataratta.mp4";
         videoDiv.appendChild(videoElement);
 
-    }
+        }
     
     // search
     function searchPage() {
@@ -3164,6 +3165,7 @@
 <script src="https://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
 </body>
 </html>
+
 
 
 
