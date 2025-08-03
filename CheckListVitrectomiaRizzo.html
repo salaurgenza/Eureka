@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <div align="center">
+        <title>checklistVitrectomia</title>
+</head>
+<body>
+    
+    <div align="middle">
+        <h1></h1>
+        <h1>*****For Information Only*****</h1>
+        <h2>U03861SU10433499</h2>
+        <h3>KIT VITRECTOMIA PROF. RIZZO</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Quantità</th>
+                    <th>Descrizione</th>
+                    <th>Componenti Attuali</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" id="quantita1" value="1"></td>
+                    <td>BLEFAROSTATO A VITE</td>
+                    <td>
+                        <input type="number" id="componenti1" value="0">
+                        <input type="checkbox" id="componenteOK1"> OK
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="quantita2" value="1"></td>
+                    <td>PINZA HOSKIN</td>
+                    <td>
+                        <input type="number" id="componenti2" value="0">
+                        <input type="checkbox" id="componenteOK2"> OK
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="quantita3" value="1"></td>
+                    <td>PINZA ST MARTIN</td>
+                    <td>
+                        <input type="number" id="componenti3" value="0">
+                        <input type="checkbox" id="componenteOK3"> OK
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="quantita4" value="1"></td>
+                    <td>PINZA CONGIUNTIVALE RETTA</td>
+                    <td>
+                        <input type="number" id="componenti4" value="0">
+                        <input type="checkbox" id="componenteOK4"> OK
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="quantita5" value="1"></td>
+                    <td>PINZA BONN DENTI RETTI</td>
+                    <td>
+                        <input type="number" id="componenti5" value="0">
+                        <input type="checkbox" id="componenteOK5"> OK
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="quantita6" value="2"></td>
+                    <td>PORTAGHI TROUTMANN</td>
+                    <td>
+                        <input type="number" id="componenti6" value="0">
+                        <input type="checkbox" id="componenteOK6"> OK
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="quantita7" value="1"></td>
+                    <td>FORBICE SCLEROCORNEALE</td>
+                    <td>
+                        <input type="number" id="componenti7" value="0">
+                        <input type="checkbox" id="componenteOK7"> OK
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="quantita8" value="1"></td>
+                    <td>MANICO DI CHARLES</td>
+                    <td>
+                        <input type="number" id="componenti8" value="0">
+                        <input type="checkbox" id="componenteOK8"> OK
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="quantita9" value="1"></td>
+                    <td>MANICO DI CHARLES ATTIVO</td>
+                    <td>
+                        <input type="number" id="componenti9" value="0">
+                        <input type="checkbox" id="componenteOK9"> OK
+                    </td>
+                </tr>
+
+                <!-- Aggiungi altre righe per ulteriori materiali -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td id="totaleQuantita">Totale strumenti: 0</td>
+                    <td></td>
+                    <td id="totaleComponenti">Totale componenti: 0</td>
+                </tr>
+            </tfoot>
+        </table>
+        <table>
+            <tr>
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data">
+                <div>
+                    <label for="note">Note:</label>
+                    <textarea id="note" rows="4" cols="50"></textarea>
+                </div>
+
+
+                <td>Firma: <input type="text" id="firma"></td>
+            </tr>
+        </table>
+        <script>// Aggiorna il totale degli strumenti e dei componenti quando si cambiano i valori
+            function aggiornaTotali() {
+                let totaleStrumenti = 0;
+                let totaleComponenti = 0;
+
+                // Calcola il totale degli strumenti e dei componenti
+
+                for (let i = 1; i <= 9; i++) {
+                    const quantita = parseInt(document.getElementById(`quantita${i}`).value);
+                    const componenti = parseInt(document.getElementById(`componenti${i}`).value);
+                    const componenteOK = document.getElementById(`componenteOK${i}`).checked;
+
+                    totaleStrumenti += quantita;
+                    totaleComponenti += (componenteOK ? componenti : 0);
+                }
+
+                // Aggiorna il testo del totale
+                document.getElementById("totaleQuantita").textContent = `Totale strumenti: ${totaleStrumenti}`;
+                document.getElementById("totaleComponenti").textContent = `Totale componenti: ${totaleComponenti}`;
+            }
+
+            // Aggiorna i totali quando i valori cambiano
+            for (let i = 1; i <= 9; i++) {
+                document.getElementById(`quantita${i}`).addEventListener('change', aggiornaTotali);
+                document.getElementById(`componenti${i}`).addEventListener('change', aggiornaTotali);
+                document.getElementById(`componenteOK${i}`).addEventListener('change', aggiornaTotali);
+            }
+
+            // Esegui l'aggiornamento iniziale
+            aggiornaTotali();</script>
+
+
+        <script src="jspdf.debug.js"></script>
+        <button id="esportaPdfButton">Esporta in PDF</button>
+        <script>document.getElementById("esportaPdfButton").addEventListener("click", function () {
+                // Crea un oggetto jsPDF
+                var pdf = new jsPDF();
+
+                // Aggiungi il contenuto HTML da esportare in PDF
+                pdf.fromHTML(document.body, 15, 15);
+
+                // Salva il PDF
+                pdf.save("documento.pdf");
+            });</script>
+
+
+
+
+
+
+        
