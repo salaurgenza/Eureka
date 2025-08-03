@@ -3136,34 +3136,37 @@
             cell.innerHTML = '<a target="_blank" href="' + item + '.JPG">' + item + '</a>';
          });
 
-        // SVUOTO E RIEMPIO IL DIV CHE CONTIENE Il VIDEO
+   // SVUOTO E RIEMPIO IL DIV CHE CONTIENE IL VIDEO
 const videoDiv = document.getElementById('video');
 videoDiv.innerHTML = '';
 
+// Recupera il nome del video dalla struttura dati (es. "Cataratta")
 const selectedVideo = listaVideoInterventoMedico[medico][intervento];
 console.log("VALORE GREZZO selectedVideo:", selectedVideo);
 
+// Rimuove eventuali spazi ed estensione .mp4 (se già inclusa)
 const selectedVideoName = selectedVideo.trim().replace(/\.mp4$/i, "");
 console.log("VALORE PULITO selectedVideoName:", selectedVideoName);
 
+// Costruisce l’URL assoluto verso il file hostato su GitHub Pages
 const videoUrl = "https://salaurgenza.github.io/Eureka/" + selectedVideoName + ".mp4";
 console.log("URL COMPLETO:", videoUrl);
 
+// Crea il tag video
 const videoElement = document.createElement('video');
 videoElement.autoplay = true;
 videoElement.controls = true;
 videoElement.width = 640;
 videoElement.src = videoUrl;
 
+// In caso di errore, mostra un messaggio nella pagina
 videoElement.onerror = () => {
     console.error("ERRORE CARICAMENTO VIDEO:", videoUrl);
     videoDiv.innerHTML = `<p style="color:red;">Video non trovato:<br>${videoUrl}</p>`;
 };
 
+// Aggiunge il video al DOM
 videoDiv.appendChild(videoElement);
-
-
-    }
 
     // search
     function searchPage() {
@@ -3180,6 +3183,7 @@ videoDiv.appendChild(videoElement);
 <script src="https://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
 </body>
 </html>
+
 
 
 
