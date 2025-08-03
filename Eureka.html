@@ -3136,15 +3136,32 @@
             cell.innerHTML = '<a target="_blank" href="' + item + '.JPG">' + item + '</a>';
          });
 
-        //SVUOTO E RIEMPIO IL DIV CHE CONTIENE Il VIDEO
-        const videoDiv = document.getElementById('video');
-        videoDiv.innerHTML = '';
-        const selectedVideo = listaVideoInterventoMedico[medico][intervento];
-        const videoElement = document.createElement('video');
-        videoElement.autoplay = true;
-        videoElement.controls = true;
-        videoElement.src = "https://salaurgenza.github.io/Eureka/" + selectedVideo + ".mp4";
-        videoDiv.appendChild(videoElement);
+        // SVUOTO E RIEMPIO IL DIV CHE CONTIENE Il VIDEO
+const videoDiv = document.getElementById('video');
+videoDiv.innerHTML = '';
+
+const selectedVideo = listaVideoInterventoMedico[medico][intervento];
+console.log("VALORE GREZZO selectedVideo:", selectedVideo);
+
+const selectedVideoName = selectedVideo.trim().replace(/\.mp4$/i, "");
+console.log("VALORE PULITO selectedVideoName:", selectedVideoName);
+
+const videoUrl = "https://salaurgenza.github.io/Eureka/" + selectedVideoName + ".mp4";
+console.log("URL COMPLETO:", videoUrl);
+
+const videoElement = document.createElement('video');
+videoElement.autoplay = true;
+videoElement.controls = true;
+videoElement.width = 640;
+videoElement.src = videoUrl;
+
+videoElement.onerror = () => {
+    console.error("ERRORE CARICAMENTO VIDEO:", videoUrl);
+    videoDiv.innerHTML = `<p style="color:red;">Video non trovato:<br>${videoUrl}</p>`;
+};
+
+videoDiv.appendChild(videoElement);
+
 
     }
 
@@ -3163,6 +3180,7 @@
 <script src="https://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
 </body>
 </html>
+
 
 
 
