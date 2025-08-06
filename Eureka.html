@@ -3143,7 +3143,7 @@ const videoDiv = document.getElementById('video');
 videoDiv.innerHTML = '';
 
 // Usa direttamente il valore dell'intervento come nome file
-const videoFileName = intervento; // mantiene la maiuscola
+const videoFileName = intervento.charAt(0).toUpperCase() + intervento.slice(1);
 const videoURL = `https://salaurgenza.github.io/Eureka/${videoFileName}.mp4`;
 
 // Creo un video invisibile per testare se può essere caricato
@@ -3183,6 +3183,7 @@ testVideo.load();
 <script src="https://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
 </body>
 </html>
+
 
 
 
