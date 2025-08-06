@@ -3138,17 +3138,35 @@
             cell.innerHTML = '<a target="_blank" href="' + item + '.JPG">' + item + '</a>';
          });
 
-        //SVUOTO E RIEMPIO IL DIV CHE CONTIENE Il VIDEO
-        const videoDiv = document.getElementById('video');
-        videoDiv.innerHTML = '';
-        const selectedVideo = listaVideoInterventoMedico[medico][intervento];
-        const videoElement = document.createElement('video');
-        videoElement.autoplay = true;
-        videoElement.controls = true;
-        videoElement.src = "https://salaurgenza.github.io/Eureka/Cataratta.mp4";
-        videoDiv.appendChild(videoElement);
+       // SVUOTO E RIEMPIO IL DIV CHE CONTIENE IL VIDEO
+const videoDiv = document.getElementById('video');
+videoDiv.innerHTML = '';
 
-        }
+// Usa direttamente il valore dell'intervento come nome file
+const videoFileName = intervento; // mantiene la maiuscola
+const videoURL = `https://salaurgenza.github.io/Eureka/${videoFileName}.mp4`;
+
+// Creo un video invisibile per testare se può essere caricato
+const testVideo = document.createElement('video');
+testVideo.src = videoURL;
+
+testVideo.oncanplay = function () {
+    const videoElement = document.createElement('video');
+    videoElement.controls = true;
+    videoElement.autoplay = true;
+    videoElement.src = videoURL;
+    videoElement.style.width = "100%";
+    videoDiv.innerHTML = '';
+    videoDiv.appendChild(videoElement);
+};
+
+testVideo.onerror = function () {
+    videoDiv.innerHTML = `<p><strong>Video non disponibile per questo intervento.</strong></p>`;
+};
+
+// Forza il caricamento per attivare gli eventi
+testVideo.load();
+
     
     // search
     function searchPage() {
@@ -3165,6 +3183,7 @@
 <script src="https://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
 </body>
 </html>
+
 
 
 
