@@ -34,12 +34,13 @@
         body {
             font-family: 'AppleChancery', cursive;
         }
+
         .highlight {
             background-color: yellow;
         }
         /* Aggiungi ulteriori regole CSS per personalizzare l'aspetto del tuo testo con il font Apple Chancery */
     </style>
-   
+
     <title></title>
     <style>
         /* Stili globali */
@@ -313,15 +314,15 @@
                 </li>
 
                 <!--li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Fasi chirurgiche
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="w3-large w3-text-theme w3-button" href="/Users/stefanopepe/Desktop/Progetti/accessi anteriori.mp4">accessi anteriori</a></li>
-            <li><a class="w3-large w3-text-theme w3-button" href="/Users/stefanopepe/Desktop/Progetti/facoemulsificazione.mp4">facoemulsificazione</a></li>
-            <li><a class="w3-large w3-text-theme w3-button" href="/Users/stefanopepe/Desktop/Progetti/posizionamento lente.mp4">posizionamento lente</a></li>
-        </ul>
-    </!--li-->
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Fasi chirurgiche
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="w3-large w3-text-theme w3-button" href="/Users/stefanopepe/Desktop/Progetti/accessi anteriori.mp4">accessi anteriori</a></li>
+                        <li><a class="w3-large w3-text-theme w3-button" href="/Users/stefanopepe/Desktop/Progetti/facoemulsificazione.mp4">facoemulsificazione</a></li>
+                        <li><a class="w3-large w3-text-theme w3-button" href="/Users/stefanopepe/Desktop/Progetti/posizionamento lente.mp4">posizionamento lente</a></li>
+                    </ul>
+                </!--li-->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Servitori
@@ -401,9 +402,9 @@
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md col-lg-3">
-         
-                <img src="Logo.jpg" width="150" height="150" class="zoomable">
-        
+
+            <img src="Logo.jpg" width="150" height="150" class="zoomable">
+
         </div>
 
         <div class="col-md col-lg-7">
@@ -550,84 +551,356 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
 <script>window.onload = function () {
+
         updateMaterial();
+
     };
+
     function updateMaterial() {
-    const medico = document.getElementById('medico').value;
-    const intervento = document.getElementById('intervento').value;
-    const videoContainer = document.getElementById("video");
 
-    const videoInterventi = {
-        AnelliTantalio: "",
-        Baerveld: "https://drive.google.com/file/d/1NeXWS6VnSoqINhUNPOCI6mIrePOUevRt/view?usp=sharing",
-        BiopsiaPalpebra: "",
-        BiopsiaCongiuntivale: "",
-        Brachiterapia: "https://drive.google.com/file/d/1GsYivcTwZqWyk2mTciD-dHvqH5pcsmm4/view?usp=sharing",
-        carlevale: "https://drive.google.com/file/d/1tWqKkPNB2WsTF5oUd-ZMVHcMUpViiBQD/view?usp=sharing",
-        cataratta: "https://drive.google.com/file/d/1qbjl84YXXf3Y3IKZCF0AXCYMhB9AyYPR/preview",
-        CatarattaEcce: "",
-        Calazio: "",
-        Ciclocrio: "",
-        Cerchiaggio: "",
-        CerchiaggioTradizionale: "https://drive.google.com/file/d/19RUTyf5wUQc36i18RpcrhrZgttzS-eD-/view?usp=sharing",
-        Dacrio: "https://drive.google.com/file/d/1Ig4WuEziojk9AC-R7fi1fw0HI85sRQTr/view?usp=sharing",
-        Entropion: "",
-        Enucleazione: "",
-        EspiantoIol: "",
-        Evisceratio: "",
-        Express: "",
-        FacoTrab: "",
-        glaucoma: "https://drive.google.com/file/d/1eYTyNQgyfOwVG-hN4E5debG50z_mOrGa/preview",
-        Ham: "",
-        LenteTorica: "",
-        Trapianto_Pk: "https://drive.google.com/file/d/1VZOZuf-A-xusebNKEGYbVW6WEq7VE3S9/view?usp=drive_link",
-        TrapiantoPkVitrectomia: "",
-        Trapianto_DMEK: "https://drive.google.com/file/d/1WkclO1X62LU7bMUD3YsGva0OFYA2WQjY/view?usp=sharing",
-        Trapianto_DSAEK: "https://drive.google.com/file/d/1yqtYneEwwv8BlMaEfh-yWeuvVmi4Vz_W/preview",
-        DALK: "https://drive.google.com/file/d/1TongOofDiavrTXdRDjUMHuev44Ldi7ST/view?usp=sharing",
-        Ptosi: "",
-        Pterigio: "",
-        PlaccaRutenio: "",
-        Preserflo: "https://drive.google.com/file/d/1Ej7CLo102A1u2l232oksWAfNYR3RPU-J/view?usp=drive_link",
-        PunctumPlug: "",
-        Pupilloplastica: "",
-        Rebubbling: "",
-        RevisioneFeritaLasik: "",
-        Samsara: "https://drive.google.com/file/d/1NphB79Xmg0AErhtnYb1o4Yr8EaH9z895/view?usp=sharing",
-        ScoppioDelBulbo: "",
-        Strabismo: "",
-        Tarsioraffia: "",
-        Trabeculectomia: "https://drive.google.com/file/d/1stXRy51MxDak7PKAoq6mBGV--RCFaKZS/view?usp=sharing",
-        vitrectomia: "",
-        vitrectomiaAnteriore: "",
-        vitrectomiaDistacco: "",
-        VitrectomiaPucker: "https://drive.google.com/file/d/1k637BSnwczenU5hTcgh4RCau457WHUQE/view?usp=sharing",
-        vitrectomiaForo: "",
-        Xen: ""
-    };
+        //VARIABILI CHE CONTENGONO MESSAGGI CHE POTREMMO VOLER CAMBIARE
 
-    const linkOriginale = videoInterventi[intervento];
+        const notFound = "Non esegue intervento";
 
-    if (linkOriginale && linkOriginale !== "") {
-        // Questa riga converte qualsiasi link in /preview, eliminando il blocco 403
-        const linkPreview = linkOriginale.replace(/\/view\?usp=.*$/, "/preview");
 
-        videoContainer.innerHTML = `
-            <iframe
-                src="${linkPreview}"
-                width="100%"
-                height="450"
-                style="border:none; border-radius:12px;"
-                allow="autoplay"
-                allowfullscreen>
-            </iframe>
-        `;
-    } else {
-        videoContainer.innerHTML = `<p>Nessun video disponibile per questo intervento.</p>`;
-    }
-}
+
+        //VARIABILI APPLICATIVE
+
+        const medico = document.getElementById('medico').value;
+
+        const intervento = document.getElementById('intervento').value;
+
+        const videoInterventi = {
+
+
+
+            AnelliTantalio:
+
+                "",
+
+
+
+            Baerveld:
+
+                "https://drive.google.com/file/d/1NeXWS6VnSoqINhUNPOCI6mIrePOUevRt/view?usp=sharing",
+
+
+
+            BiopsiaPalpebra:
+
+                "",
+
+
+
+            BiopsiaCongiuntivale:
+
+                "",
+
+
+
+            Brachiterapia:
+
+                "https://drive.google.com/file/d/1GsYivcTwZqWyk2mTciD-dHvqH5pcsmm4/view?usp=sharing",
+
+
+
+            carlevale:
+
+                "https://drive.google.com/file/d/1tWqKkPNB2WsTF5oUd-ZMVHcMUpViiBQD/view?usp=sharing",
+
+
+
+            cataratta:
+
+                "https://drive.google.com/file/d/1qbjl84YXXf3Y3IKZCF0AXCYMhB9AyYPR/preview",
+
+
+
+            CatarattaEcce:
+
+                "",
+
+
+
+            Calazio:
+
+                "",
+
+
+
+            Ciclocrio:
+
+                "",
+
+
+
+            Cerchiaggio:
+
+                "",
+
+
+
+            CerchiaggioTradizionale:
+
+                "https://drive.google.com/file/d/19RUTyf5wUQc36i18RpcrhrZgttzS-eD-/view?usp=sharing",
+
+
+
+            Dacrio:
+
+                "https://drive.google.com/file/d/1Ig4WuEziojk9AC-R7fi1fw0HI85sRQTr/view?usp=sharing",
+
+
+
+            Entropion:
+
+                "",
+
+
+
+            Enucleazione:
+
+                "",
+
+
+
+            EspiantoIol:
+
+                "",
+
+
+
+            Evisceratio:
+
+                "",
+
+
+
+            Express:
+
+                "",
+
+
+
+            FacoTrab:
+
+                "",
+
+
+
+            glaucoma:
+
+                "https://drive.google.com/file/d/1eYTyNQgyfOwVG-hN4E5debG50z_mOrGa/preview",
+
+
+
+            Ham:
+
+                "",
+
+
+
+            LenteTorica:
+
+                "",
+
+
+
+            Trapianto_Pk:
+
+                "https://drive.google.com/file/d/1VZOZuf-A-xusebNKEGYbVW6WEq7VE3S9/view?usp=drive_link",
+
+
+
+            TrapiantoPkVitrectomia:
+
+                "",
+
+
+
+            Trapianto_DMEK:
+
+                "https://drive.google.com/file/d/1WkclO1X62LU7bMUD3YsGva0OFYA2WQjY/view?usp=sharing",
+
+
+
+            Trapianto_DSAEK:
+
+                "https://drive.google.com/file/d/1yqtYneEwwv8BlMaEfh-yWeuvVmi4Vz_W/preview",
+
+
+
+            DALK:
+
+                "https://drive.google.com/file/d/1TongOofDiavrTXdRDjUMHuev44Ldi7ST/view?usp=sharing",
+
+
+
+            Ptosi:
+
+                "",
+
+
+
+            Pterigio:
+
+                "",
+
+
+
+            PlaccaRutenio:
+
+                "",
+
+
+
+            Preserflo:
+
+                "https://drive.google.com/file/d/1Ej7CLo102A1u2l232oksWAfNYR3RPU-J/view?usp=drive_link",
+
+
+
+            PunctumPlug:
+
+                "",
+
+
+
+            Pupilloplastica:
+
+                "",
+
+
+
+            Rebubbling:
+
+                "",
+
+
+
+            RevisioneFeritaLasik:
+
+                "",
+
+
+
+            Samsara:
+
+                "https://drive.google.com/file/d/1NphB79Xmg0AErhtnYb1o4Yr8EaH9z895/view?usp=sharing",
+
+
+
+            ScoppioDelBulbo:
+
+                "",
+
+
+
+            Strabismo:
+
+                "",
+
+
+
+            Tarsioraffia:
+
+                "",
+
+
+
+            Trabeculectomia:
+
+                "https://drive.google.com/file/d/1stXRy51MxDak7PKAoq6mBGV--RCFaKZS/view?usp=sharing",
+
+
+
+            vitrectomia:
+
+                "",
+
+
+
+            vitrectomiaAnteriore:
+
+                "",
+
+
+
+            vitrectomiaDistacco:
+
+                "",
+
+
+
+            VitrectomiaPucker:
+
+                "https://drive.google.com/file/d/1k637BSnwczenU5hTcgh4RCau457WHUQE/view?usp=sharing",
+
+
+
+            vitrectomiaForo:
+
+                "",
+
+
+
+            Xen:
+
+                ""
+
+
+
+        };
+
+
+
+        const videoContainer = document.getElementById("video");
+
+
+
+        if (videoInterventi[intervento]) {
+
+
+
+            videoContainer.innerHTML = `
+
+        <iframe
+
+            src="${videoInterventi[intervento]}"
+
+            width="100%"
+
+            height="450"
+
+            style="border:none; border-radius:12px;"
+
+            allow="autoplay"
+
+            allowfullscreen>
+
+        </iframe>
+
+    `;
+
+
+
+        } else {
+
+
+
+            videoContainer.innerHTML = `
+
+        <p>Nessun video disponibile</p>
+
+    `;
+
+        }
+
+
         const listaMaterialiInterventoMedico = {
             Rizzo: {
                 cataratta: ["Cesto Cataratta", "Cataratta Rizzo", "Monovia", "2 Duovisc", "Aprokam", "Custompack", "Mydrane", "Acetilcolina"],
@@ -653,7 +926,7 @@
                 Strabismo: [notFound],
                 Dacrio: [notFound],
                 EspiantoIol: ["Cesto Cataratta", "Cataratta Rizzo", "KIT espianto IOL", "Monovia", "2 Duovisc", "Aprokam", "Custompack", "Mydrane", "Acetilcolina"],
-                Xen: ["Custompack Glaucoma","Cesto glaucoma", "Diatermia", "Xen 65", "Mitomicina", "Vicryl 8.0", "Lidocaina", "Urbason 40mg", "BioBlue", "Introcan 24g", "Freccette", "Penna Dermografica"],
+                Xen: ["Custompack Glaucoma", "Cesto glaucoma", "Diatermia", "Xen 65", "Mitomicina", "Vicryl 8.0", "Lidocaina", "Urbason 40mg", "BioBlue", "Introcan 24g", "Freccette", "Penna Dermografica"],
                 RevisioneFeritaLasik: ["CustomPack cataratta", "Cesto Lamellare", "Cesto cataratta"],
                 vitrectomiaAnteriore: ["Vitrectomo Anteriore", "Cannula buratta blu"],
                 vitrectomia: ["Cesto Vitrectomia", "Custompack", "Biom", "Indentatore", "Diatermia", "Candeliere", "Gel 4000", "Bianco", "Blue", "Olio Silicone", "Endodiatermia", "Perfluoro"],
@@ -663,11 +936,11 @@
                 VitrectomiaPucker: ["Cesto Vitrectomia", "Custompack", "Biom", "Indentatore", "Diatermia", "Bianco"],
                 vitrectomiaForo: ["Cesto Vitrectomia", "Custompack", "Biom", "Indentatore", "Diatermia", "Candeliere", "Bianco", "Blue", "Olio Silicone", "Endodiatermia", "Perfluoro"],
                 glaucoma: ["Cesto Glaucoma", "Cesto Cataratta", "Diatemia", "Mitomicina", "Nylon 10.0", "Urbason", "Dispositivo", "Vicryl 8.0"],
-                Cerchiaggio: ["Cesto Vitrectomia", "Sonda Crio", "Crio", "GEL 4000", "Filtro aria",  "Custompack distacco", "Biom", "Indentatore", "Diatermia", "Candeliere", "Bianco", "Blue", "Olio Silicone", "Endodiatermia", "Perfluoro"],
+                Cerchiaggio: ["Cesto Vitrectomia", "Sonda Crio", "Crio", "GEL 4000", "Filtro aria", "Custompack distacco", "Biom", "Indentatore", "Diatermia", "Candeliere", "Bianco", "Blue", "Olio Silicone", "Endodiatermia", "Perfluoro"],
                 Trapianto_Pk: ["Custompack Trapianto", "Cesto Cheratoplastica", "Cesto Cataratta", "Lama 30° o 15°", "Trapano", "Punch", "Siringa 5 ml aria", "cornea", "Duovisc", "Etilon 10.0", "Vicryl 8.0", "Acetilcolina"],
-                TrapiantoPkVitrectomia: ["Custompack Trapianto", "Custompack 25","Cesto Cheratoplastica", "Cesto Biom", "vitrectomia Rizzo", "Lente di ekart", "Lama 15°", "Trapano", "Punch", "Antibiotici", "Cornea", "Duovisc", "Etilon 10.0", "Vicryl 8.0", "Prolene 10.0 ago curvo"],
+                TrapiantoPkVitrectomia: ["Custompack Trapianto", "Custompack 25", "Cesto Cheratoplastica", "Cesto Biom", "vitrectomia Rizzo", "Lente di ekart", "Lama 15°", "Trapano", "Punch", "Antibiotici", "Cornea", "Duovisc", "Etilon 10.0", "Vicryl 8.0", "Prolene 10.0 ago curvo"],
                 CerchiaggioTradizionale: ["Cesto Episclerale", "Banda in silicone", "GEL 4000", "Filtro aria", "Sleeve", "Sonda Crio", "Crio", "Custompack distacco", "Biom", "lama 30, 15", "filtro aria", "Indentatore", "Diatermia", "Candeliere", "Endodiatermia", "Seta 2.0 x 2", "Mersilene 5.0", "Vicryl 8.0"],
-                
+
                 Express: ["custompack glaucoma", "Cesto Cataratta", "Crescent", "Lama 30°", "Express", "Diatermia", "Mitomicina", "Ial", "Ethilon 10.0"],
                 Pupilloplastica: ["Cesto Trapianto", "Lama 1.2 ", "Lama 2.2 ", "prolene 10.0 retto", "Pinza di Eckart", "Ial", "Aprokam"],
                 Ham: ["Cesto Vitrectomia", "Biom", "Membrana", "Punch", "2 Pinze di Eckart"],
@@ -805,7 +1078,7 @@
                 vitrectomiaDistacco: ["Cesto Vitrectomia", "Custompack", "Biom", "Indentatore", "Gel 4000", "Diatermia", "Candeliere", "Bianco", "Blue", "Olio Silicone", "Endodiatermia", "Perfluoro"],
                 VitrectomiaPucker: ["Cesto Vitrectomia", "Custompack", "Biom", "Indentatore", "Gel 4000", "Diatermia", "Bianco"],
                 vitrectomiaForo: ["Cesto Vitrectomia", "Custompack", "Biom", "Indentatore", "Gel 4000", "Diatermia", "Candeliere", "Bianco", "Blue", "Olio Silicone", "Endodiatermia", "Perfluoro"],
-                Cerchiaggio: ["Cesto Vitrectomia", "Custompack distacco", "Biom", "GEL 4000", "Filtro aria",  "Indentatore", "Gel 4000", "Diatermia", "Candeliere", "Bianco", "Blue", "Olio Silicone", "Endodiatermia", "Sonda Crio", "Crio", "Perfluoro"],
+                Cerchiaggio: ["Cesto Vitrectomia", "Custompack distacco", "Biom", "GEL 4000", "Filtro aria", "Indentatore", "Gel 4000", "Diatermia", "Candeliere", "Bianco", "Blue", "Olio Silicone", "Endodiatermia", "Sonda Crio", "Crio", "Perfluoro"],
                 Trapianto_Pk: ["Custompack Trapianto", "Cesto Mosca 1", "Cesto Cataratta", "Lama 30°", "crescent", "Trapano", "Punch", "Siringa 5 ml aria", "cornea", "IAL", "Etilon 10.0", "Acetilcolina"],
                 Express: ["custompack glaucoma", "Cesto Cataratta", "Crescent", "Lama 30°", "Express", "Diatermia", "Mitomicina", "Ial", "Ethilon 10.0"],
                 Pupilloplastica: ["Cesto Trapianto", "Lama 1.2 ", "Lama 2.2 ", "prolene 10.0 retto", "Pinza di Eckart", "Ial", "Aprokam"],
@@ -1372,7 +1645,7 @@
                 Evisceratio: ["Cesto Orbita o placca", "Oftasteril", "Diatermia", "Garze", "Sir 20 cc", "Sondino Bianco (aspira bulbo)", "Telo Paziente", "Manopole scialitiche", "Ciotole", "Cucchiai Evisceratio", "Lama 30", "Biglia", "Vicryl 5.0 (sclera)", "Vicryl 6.0", "Vicryl 8.0 (congiuntiva)"],
                 Enucleazione: ["Cesto Strabismo o Placca 1", "Lama 30°", "Ciotole", "Provetta Falcon piccola", "Provetta Biopsia 60 ml", "Seta 4.0", "Vicryl 5.0 x5", "Vicryl 7.0", "Protesi e Klemmer Curva", "Iniettore", "Rete di Vicryl", "Conformatore", "Gentamicina 2 FL"],
                 Dacrio: ["Cesto Dacrio", "Telo paziente", "Asciughini", "Aspiratore con sondino nero", "Garze 10x10", "Lama crescent", "UNCINO rosa", "Diatermia", "Vicryl 6.0 (2)", "Vicryl 5.0", "Merocel"],
-                Brachiterapia: ["Fili e Bottoni", "Cesto palpebra 1", "vicryl 5.0 V303", "Manopole scialitica ", "Garze e siringhe varie"], 
+                Brachiterapia: ["Fili e Bottoni", "Cesto palpebra 1", "vicryl 5.0 V303", "Manopole scialitica ", "Garze e siringhe varie"],
                 vitrectomia: [notFound],
                 vitrectomiaForo: [notFound],
                 VitrectomiaPucker: [notFound],
@@ -2481,8 +2754,8 @@
                 carlevale: ["Blefarostato", "IAL", "Viscoelastico", "Pinza Coccodrillo", "Penna dermografica", "Lame 30 ° e 2,2", "Crescent", "Weskot", "Diatermia", "Pinza Anatomica", "Compasso", "Mc Pearson", "Uncino da Lente", "Nylon c3", "Vicryl 8.0", "Acetilcolina"],
                 CatarattaEcce: ["Blefarostato", "Pinza Hoskin", "Lama1.2", "Lama 2.2", "Provisc", "Pinza da Ressi", "Idrodissezione", "Chopper", "Manipolatore", "Facoemulsificatore", "Monovia", "Duovisc", "Lente", "Idrosutura", "Aprokam"],
                 Cerchiaggio: ["Custompack distacco", "Cesto Biom", "Episclerale", "Criodiatermia", "Sonda Diatermia", "Endodiatermia", "Laccio in Silicone", "Binario 287", "Sleeve", "Indentatore", "Blefarostato", "Pinza Hoskin", "Trocart", "Weskot", "Forbici Steevens", "Uncini", "Seta 2.0 a Metà", "Laccio", "Sleeve", "Waskets", "Pinze Congiuntivali", "Mersilene 5.0", "Lame 30° e 15", "Pannarale", "Aria 5cc", "Compasso", "Vicryl 7.0", "Bentelan e Gentamicina s.c"],
-                Trapianto_Pk: ["Blefarostato", "Compasso", "Dermografica", "Hoskin", "Lama 30°", "Trapano", "forbici destra e sinistra", "Anello fleringa", "Vicryl 8.0", "Punch", "Siringa 5 ml aria",  "Serrafili", "spatola a cucchiaio", "cornea", "Duovisc", "Ethilon 10.0", "serrafili", "spatola a manina", "portaghi", "Acetilcolina"],
-                TrapiantoPkVitrectomia:["Blefarostato", "Compasso", "Dermografica", "Hoskin", "Trocar per infusione", "Anello di Fleringa", "vicryl 8.0", "Punch", "forbici destra e sinistra", "Visco", "Pulizia interna con raccolta campioni", "Pupilloplastica con prolene 10.0", "Trapano",  "Serrafili", "cornea", "Duovisc", "Ethilon 10.0", "serrafili", "spatola a manina", "portaghi", "Gentamicina"],
+                Trapianto_Pk: ["Blefarostato", "Compasso", "Dermografica", "Hoskin", "Lama 30°", "Trapano", "forbici destra e sinistra", "Anello fleringa", "Vicryl 8.0", "Punch", "Siringa 5 ml aria", "Serrafili", "spatola a cucchiaio", "cornea", "Duovisc", "Ethilon 10.0", "serrafili", "spatola a manina", "portaghi", "Acetilcolina"],
+                TrapiantoPkVitrectomia: ["Blefarostato", "Compasso", "Dermografica", "Hoskin", "Trocar per infusione", "Anello di Fleringa", "vicryl 8.0", "Punch", "forbici destra e sinistra", "Visco", "Pulizia interna con raccolta campioni", "Pupilloplastica con prolene 10.0", "Trapano", "Serrafili", "cornea", "Duovisc", "Ethilon 10.0", "serrafili", "spatola a manina", "portaghi", "Gentamicina"],
                 CerchiaggioTradizionale: ["Custompack distacco", "Cesto Biom", "Episclerale", "Criodiatermia", "Sonda Diatermia", "Endodiatermia", "Laccio in Silicone", "Binario 287", "Sleeve", "Indentatore", "Blefarostato", "Pinza Hoskin", "Trocart", "Weskot", "Forbici Steevens", "Uncini", "Seta 2.0 a Metà", "Laccio", "Sleeve", "Waskets", "Pinze Congiuntivali", "Mersilene 5.0", "Diatermia 30", "Lama 30°", "Endodiatermia 20", "Lama 15°", "Arruga", "Aria 5cc", "Compasso", "Vicryl 7.0", "Bentelan e Gentamicina s.c"],
                 EspiantoIol: ["Blefarostato", "pinza hoskin", "lama1.2", "Mydrane", "lama 2.2", "duovisc", "manipolatore", "pinza retina", "Forbici Taglio lente", "lente", "idrosutura", "Acetilcolina", "aprokam"],
                 Endoftalmite: ["Cesto Biom", "Vitrectomia", "Triamcinolone", "Prelievo in camera Anteriore", "Prelievo in camera Posteriore"],
@@ -2504,7 +2777,7 @@
                 Ham: ["Blefarostato", "Trocart", "punch", "membrana", "pinze eckart e coccodrillo", "perfluoro", "Vicrly 7.0"],
                 RevisioneFeritaLasik: ["Spatola", "Colibri", "Scolla la cornea", "Pulizia epitelio", "Mitomicina 20 sec", "Lente a contatto"],
                 FacoTrab: ["Weskot (congiuntiva e atenone)", "Diatermia", "Kompasso 4mm", "Sportello 30° (sclera)", "Crescent", "Mitomicina", "lama 15° (Asola iride)", "forbici angolate", "Riempimento camera viscat", "Serrafili e Portaghi", "Prolene 10.0", "Vicryl 10.0", "Nylon C3"],
-                Trapianto_DSAEK: ["Blefarostato", "lama 1.2", "Marcatore", "Anterior Chamber", "Deflussore", "bss a caduta", "Uncino Inverso", "uncini inversi", "Rastrello", "Infusione aspirazione-corticale","Punch", "lenticolo corneale (doppio servitore)", "lama 2.75", "Spatola a Orecchie di Elefante", "Pinze Ekarth", "serrafili curve", "cannuline", "filtro aria", "Siringa 5 ml aria per aria sterile", "ethilon 7770"],
+                Trapianto_DSAEK: ["Blefarostato", "lama 1.2", "Marcatore", "Anterior Chamber", "Deflussore", "bss a caduta", "Uncino Inverso", "uncini inversi", "Rastrello", "Infusione aspirazione-corticale", "Punch", "lenticolo corneale (doppio servitore)", "lama 2.75", "Spatola a Orecchie di Elefante", "Pinze Ekarth", "serrafili curve", "cannuline", "filtro aria", "Siringa 5 ml aria per aria sterile", "ethilon 7770"],
                 Trapianto_DMEK: ["Blefarostato", "Lama 1,2 e 2,2", "Acetilcolina", "Monovia", "Blue", "Bacinella con Iniettore Monouso", "Lenticolo Corneale", "Punch", "Siringa 5 ml Aria", "Uncino Inverso", "Spatola a Cucchiaio", "Ethilon 10.0 n° 7770", "Siringa 5 ml Con ago Smusso a 6 vie", "Serrafili", "Portaghi", "Acetilcolina"],
                 DALK: ["Custompack", "Trapianto", "Cesto Mosca 1", "Cesto Cataratta", "trapano e punch", "2 siringhe da 5 ml - aria e acqua -", "Lama 30 gradi", "Crescent", "Punteruolo", "Serrafili", "Portaghi"],
                 strabismo: ["Blefarostato", "Ago Camera Anteriore", "Diatermia", "Bietti", "Weskot", "Uncini", "Compasso", "Miostato", "Vicryl 6.0 n°544 x 2", "Gentamicina"],
@@ -3037,7 +3310,7 @@
                 BiopsiaCongiuntivale: ["bleforastato", "carbocaina", "gel 4000", "weskot", "bietti", "crescent°", "diatermia", "portaghi con blocco", "vicryl 5.0"],
                 AnelliTantalio: ["bleforastato", "Bietti", "Arruga", "PortAghi", "Bulldog", "Seta 2.0", "Vicryl 8.0"],
                 Ham: ["blefarostato", "pinza Bietti", "alcool", "crescent", "vicryl 7.0", "membrana", "vicryl 7.0"],
-                Dacrio: ["Specillo", "Bss con ago retto", "scolla periostio angolati", "ossivori p-m-g", "Scolla Periostio", "bulldog", "Klemmer", "Epiphora","gentamcina con ago curvo", "seta 4.0 x 2"],
+                Dacrio: ["Specillo", "Bss con ago retto", "scolla periostio angolati", "ossivori p-m-g", "Scolla Periostio", "bulldog", "Klemmer", "Epiphora", "gentamcina con ago curvo", "seta 4.0 x 2"],
                 Pterigio: ["Gel4000", "Weskot", "Carbocaina", "Colibri", "Crescent", "Diatermia ", "Vicryl 8.0"],
                 Brachiterapia: ["Bietti", "Uncino lungo", "Ago di wright", "filo radiopaco", "Vicryl 5.0 V303"],
                 Ptosi: ["Lama 30", "Bietti", "diatermia", "Weskot", "Crescent", "vicryl 5.0 doppiamente armato", "Vicryl 6.0"],
@@ -3407,36 +3680,36 @@
             const row = sequenzaBody.insertRow();
             const cell = row.insertCell();
             cell.innerHTML = '<a target="_blank" href="' + item + '.JPG">' + item + '</a>';
-         });
+        });
 
-       // SVUOTO E RIEMPIO IL DIV CHE CONTIENE IL VIDEO
-const videoDiv = document.getElementById('video');
-videoDiv.innerHTML = '';
+        // SVUOTO E RIEMPIO IL DIV CHE CONTIENE IL VIDEO
+        const videoDiv = document.getElementById('video');
+        videoDiv.innerHTML = '';
 
-// Usa direttamente il valore dell'intervento come nome file
-const videoFileName = intervento.charAt(0).toUpperCase() + intervento.slice(1);
-const videoURL = `https://salaurgenza.github.io/Eureka/${videoFileName}.mp4`;
+        // Usa direttamente il valore dell'intervento come nome file
+        const videoFileName = intervento.charAt(0).toUpperCase() + intervento.slice(1);
+        const videoURL = `https://salaurgenza.github.io/Eureka/${videoFileName}.mp4`;
 
-// Creo un video invisibile per testare se può essere caricato
-const testVideo = document.createElement('video');
-testVideo.src = videoURL;
+        // Creo un video invisibile per testare se può essere caricato
+        const testVideo = document.createElement('video');
+        testVideo.src = videoURL;
 
-testVideo.oncanplay = function () {
-    const videoElement = document.createElement('video');
-    videoElement.controls = true;
-    videoElement.autoplay = true;
-    videoElement.src = videoURL;
-    videoElement.style.width = "100%";
-    videoDiv.innerHTML = '';
-    videoDiv.appendChild(videoElement);
-};
+        testVideo.oncanplay = function () {
+            const videoElement = document.createElement('video');
+            videoElement.controls = true;
+            videoElement.autoplay = true;
+            videoElement.src = videoURL;
+            videoElement.style.width = "100%";
+            videoDiv.innerHTML = '';
+            videoDiv.appendChild(videoElement);
+        };
 
-testVideo.onerror = function () {
-    videoDiv.innerHTML = `<p><strong>Video non disponibile per questo intervento.</strong></p>`;
-};
+        testVideo.onerror = function () {
+            videoDiv.innerHTML = `<p><strong>Video non disponibile per questo intervento.</strong></p>`;
+        };
 
-// Forza il caricamento per attivare gli eventi
-testVideo.load();
+        // Forza il caricamento per attivare gli eventi
+        testVideo.load();
 
     }
     // search
@@ -3449,8 +3722,7 @@ testVideo.load();
         keywords.forEach(function (keyword) {
             $('body').highlight(keyword); // Evidenzia il testo corrispondente
         });
-    }
-    </script>
+    }</script>
 <script src="https://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
 </body>
 </html>
